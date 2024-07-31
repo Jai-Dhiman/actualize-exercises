@@ -5,7 +5,7 @@
 names = ["John", "Jacob", "Jingleheimer", "Smith"]
 
 index = 0
-while index < 4
+while index < names.length
     puts names[index]
     index = index + 1 
 end
@@ -18,7 +18,7 @@ end
 number = [1, 3, 5, 7]
 
 index = 0
-while index < 4
+while index < number.length
     puts number[index] * 3
     index = index + 1
 end
