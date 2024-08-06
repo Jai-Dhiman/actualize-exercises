@@ -18,10 +18,10 @@ if 2 > 3          # 5 Two is not greater than 3 so nothing happens
   end             
   w = 9           
 elsif 2 == 2      # 6 2 is equal to 2
-  x = 70          
-  if 2 > 1        
+  x = 70          #6.3: Since elsif is true, x becomes 70
+  if 2 > 1        #6.6: Since 2 is greater than 1, y becomes 80
     y = 80        # 7 (v=1, w=2, x=70, y=80, z=5)
-  else            
+  else            #7.3: Doesn't run because if part was true
     z = 90        
   end             
   if x < 100      
