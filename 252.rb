@@ -3,19 +3,11 @@
 # Then run the method and print the result. 
 # (Note: you do not need to make a custom class for this exercise, just a method)
 
-def addition
-    puts 'First Number?: '
-    num1 = gets.chomp
-    puts 'Second Number?: '
-    num2 = gets.chomp
-    puts 'Third Number?: '
-    num3 = gets.chomp
-    puts 'Fourth Number?: '
-    num4 = gets.chomp
-    sum = num1.to_i + num2.to_i + num3.to_i + num4.to_i
-    puts "Sum is #{sum}"
+def num_addition(num1, num2, num3, num4)
+    return num1 + num2 + num3 + num4
 end
-addition
+addition = num_addition(2,5,7,3)
+puts addition
 
 # QUESTION 2
 # Write a class called Shoe that stores attributes for name, color, and price.
