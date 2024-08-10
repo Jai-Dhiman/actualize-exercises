@@ -18,4 +18,27 @@
 # Instead you'll write code to go through the array two items at a time 
 # to accomplish the same thing.
 
+#First get the inputted array
+
+array = [3,6,4,7,6,5]
+
+#Run the program many times, based on the size of the array
+array.length.times do
+
+#create a loop to take the first two items, and swap if one is bigger, etc
+    index = 0
+    index2 = 1
+
+    while index < array.length - 1
+        if array[index] > array[index2]
+            holder = array[index]
+            array[index] = array[index2]
+            array[index2] = holder
+        end
+        index = index + 1
+        index2 = index + 1
+    end
+end
+pp array
+
 
