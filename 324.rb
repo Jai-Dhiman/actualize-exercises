@@ -18,11 +18,11 @@ index = 0
 #creating a new array to store numbers that are unique
 new_array = []
 
-#Creating the loop that checks if the number exists in the new array
+#Creates a loop that checks if the number exists in the new array
 while index < numbers.length
-    #this if statement check if the number is in the new array
+    #Check if the number is in the new array
     if new_array.include?(numbers[index]) == false
-        #this puts the number into the new array if its not already there
+        #Puts the number into the new array if its not already there
         new_array.push(numbers[index])
     end
     index = index + 1 
