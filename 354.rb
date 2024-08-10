@@ -18,27 +18,47 @@
 # Instead you'll write code to go through the array two items at a time 
 # to accomplish the same thing.
 
-#First get the inputted array
-
 array = [3,6,4,7,6,5]
+# Write code that loops through an array and prints each number one at a time.
 
-#Run the program many times, based on the size of the array
-array.length.times do
 
-#create a loop to take the first two items, and swap if one is bigger, etc
-    index = 0
-    index2 = 1
 
-    while index < array.length - 1
-        if array[index] > array[index2]
-            holder = array[index]
-            array[index] = array[index2]
-            array[index2] = holder
-        end
-        index = index + 1
-        index2 = index + 1
-    end
-end
-pp array
+#Write code that loops through an array and prints two numbers at a time.
+
+
+
+#Write code that loops through an array and compares two numbers at a time,
+
+
+
+#printing "SWAP" if the second number is smaller than the first.
+
+
+
+
+# #First get the inputted array
+
+# array = [3,6,4,7,6,5]
+
+# #Run the program many times, based on the size of the array
+# array.length.times do
+
+# #create a loop to take the first two items, and swap if one is bigger, etc
+#     index = 0
+#     index2 = 1
+#     #two indexes so that you can check the two numbers against eachother
+#     while index < array.length - 1
+#         #Check if number is greater
+#         if array[index] > array[index2]
+#             #if number is greater, switch the positions of the numbers
+#             holder = array[index]
+#             array[index] = array[index2]
+#             array[index2] = holder
+#         end
+#         index = index + 1
+#         index2 = index + 1
+#     end
+# end
+# pp array
 
 

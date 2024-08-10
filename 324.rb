@@ -20,9 +20,14 @@ new_array = []
 
 #Creates a loop that checks if the number exists in the new array
 while index < numbers.length
-    #Check if the number is in the new array
+    #Checking here what the array looks like before the if statement
+    #pp numbers
+    #pp new_array
+
+    #Write an if statement that checks if the number is already in new_array
     if new_array.include?(numbers[index]) == false
-        #Puts the number into the new array if its not already there
+        #puts "number not included"
+        #Adds the number into the new array if its not already there
         new_array.push(numbers[index])
     end
     index = index + 1 
