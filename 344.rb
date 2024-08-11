@@ -16,13 +16,14 @@ def roman_numeral
     puts "Give a number: "
     input = gets.chomp
 
+    #no roman numeral for zero check
     if input == 0
         puts "0"
     end
 
     #my thoughts starting here are creating a way to seperate the tens place from the hundreds and thousands
     letters = input.split(//)
-    pp letters
+    #pp letters
     
     #I want to create a hash that equates each number string to its roman numeral string equivalent
     roman_hash = { '1' => 'I', '2' => 'II', '3' => 'III', '4' => 'IV', '5' => 'V', '6' => 'VI', '7' => 'VII', '8' => 'VIII', '9' => 'IX', 
@@ -33,25 +34,41 @@ def roman_numeral
     #now i want to create a new array that takes the converted value for each place
     #I reverse the array to get to the 10s place first
     letters = letters.reverse!
-    pp letters
+    #pp letters
 
     #loop to convert numbers to roman numerals
     index = 0
     new_array = []
+
+    #convert string array to integer array
+    letters.map!(&:to_i)
+    # pp letters
+    # pp new_array
+
     while index < letters.length
-        letters[index].to_i = letters[index].to_i ** index
-           #This is the part that I'm stuck at, i cant get the loop to convert to integers so that the correct 10s and 100s place value 
-           #Can be brought from the Hash 
-        new_array.push(roman_hash_1[letters[index]])
+        #puts the integer into the correct "10's" place, and converts back to string for conversion
+        letters[index] = (letters[index] * (10 ** index)).to_s
+        # pp letters
+        #Convert string into roman numeral equivalent
+        new_array.push(roman_hash[letters[index]])
+        # pp new_array
         index = index + 1
     end
 
     #reversing the array back
     new_array = new_array.reverse!
-    pp new_array
+    #pp new_array
 
     #Once every part of the array is converted to roman numberals, I want to combine the strings into one, and then print
     
+    index = 0
+    finalstring = ''
+    while index < new_array.length
+        finalstring = finalstring + new_array[index]
+        index = index + 1
+    end
+
+    puts "Your Roman Numeral is: #{finalstring}"
 end
 
 
