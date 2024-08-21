@@ -1,0 +1,13 @@
+h1, h2 {
+    color: green;
+  }
+  
+  ol li {
+    color: red;
+  }
+  
+  ul li:first-of-type {
+    color: blue;
+  }
+  
+  
